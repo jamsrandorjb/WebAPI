@@ -26,13 +26,8 @@ namespace WebAPI.Controllers
         //GET api/workexperience/getcompanynames
         [HttpGet]
         [ActionName("GetCompanyNames")]
-        public List<string> GetCompanyNames() {
-            List<WorkExperience> workexperiences = wer.findAll();
-            List<string> companyNames = new List<string>();
-            foreach (var item in workexperiences)
-                companyNames.Add(item.CompanyName);
-            return companyNames;
-            //wer.findAll().Select(x => x.CompanyName).ToList();
+        public List<string> GetCompanyNames() {   
+            return wer.GetCompanyNames();
         }
 
         /// <summary>

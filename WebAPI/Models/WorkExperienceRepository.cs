@@ -9,6 +9,9 @@ namespace WebAPI.Models
     {
         private List<WorkExperience> workExperiences = new List<WorkExperience>();
 
+        /// <summary>
+        /// I used fake data, haven't connected to DB yet
+        /// </summary>
         public WorkExperienceRepository(){
 
             WorkExperience w1 = new WorkExperience();
@@ -77,7 +80,12 @@ namespace WebAPI.Models
 
 
         }
-
+        /// <summary>
+        /// find work experience by ID, using Linq here. FirstOrDefault
+        /// if there is no work experience related to the input it will return null
+        /// </summary>
+        /// <param name="id">Id of the work experience</param>
+        /// <returns>Work Experience object</returns>
         public WorkExperience find(int id)
         {
             return workExperiences.Where(e => e.Id == id).FirstOrDefault();
@@ -90,6 +98,13 @@ namespace WebAPI.Models
 
         public void addExperience(WorkExperience we) {
             this.workExperiences.Add(we);
+        }
+        /// <summary>
+        /// Returning only company names that I worked, using Linq, casting
+        /// </summary>
+        /// <returns>List of company names</returns>
+        public List<string> GetCompanyNames(){
+            return this.workExperiences.Select(x => x.CompanyName).ToList();
         }
 
         public void removeExperience(int id) {
