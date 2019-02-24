@@ -19,7 +19,7 @@ namespace WebAPI.Models
         public string CompanyName { get; set; }
         public string PositionHeld { get; set; }
 
-        public string LocationCity { get; set; }
+        public string LocationCity { get; set; } 
         public string LocationCountry { get; set; }
         public int LocationZip { get; set; }
 
