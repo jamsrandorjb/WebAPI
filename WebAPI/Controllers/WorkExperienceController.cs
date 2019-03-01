@@ -8,15 +8,16 @@ using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
+    
     /// <summary>
     /// This is where you can pull all the information about my work experience
     /// </summary>
     public class WorkExperienceController : System.Web.Http.ApiController
     {
-        private WorkExperienceRepository wer;
+        //private WorkExperienceRepository wer;
         public WorkExperienceController() {
-            if (wer == null)
-                wer = new WorkExperienceRepository();
+            //if (wer == null)
+            //    wer = new WorkExperienceRepository();
         }
 
         /// <summary>
@@ -26,8 +27,8 @@ namespace WebAPI.Controllers
         //GET api/workexperience/getcompanynames
         [HttpGet]
         [ActionName("GetCompanyNames")]
-        public List<string> GetCompanyNames() {   
-            return wer.GetCompanyNames();
+        public List<string> GetCompanyNames() {
+            return null;// wer.GetCompanyNames();
         }
 
         /// <summary>
@@ -37,7 +38,7 @@ namespace WebAPI.Controllers
         //GET api/workexperience/get
         [NonAction]
         public List<WorkExperience> Get() {
-            return wer.findAll();
+            return null;// wer.findAll();
         }
 
         /// <summary>
@@ -48,19 +49,19 @@ namespace WebAPI.Controllers
         //GET api/workexperience/get/id
         [NonAction]
         public WorkExperience Get(int id) {
-            return wer.find(id);
+            return null;//wer.find(id);
         }
 
         //POST api/workexperience/post
         [NonAction]
         public void Post(WorkExperience we) {
-            wer.addExperience(we);
+            //wer.addExperience(we);
         }
 
         //DELETE api/workexperience/delete/id
         [NonAction]
         public void Delete(int id) {
-            wer.removeExperience(id);
+            //wer.removeExperience(id);
         }
     }
 }

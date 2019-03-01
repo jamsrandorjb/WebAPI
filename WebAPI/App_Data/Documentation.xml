@@ -500,10 +500,23 @@
         </member>
         <member name="M:WebAPI.Controllers.WorkExperienceController.Get(System.Int32)">
             <summary>
-            Get a work experience by ID
+            Get a work experience by ID, I am Overloading here the Get method 
             </summary>
             <param name="id">ID of the work experience</param>
             <returns>Work experience information</returns>
+        </member>
+        <member name="M:WebAPI.DataAccess.ApplicationDBInitializer.#ctor">
+            <summary>
+            Using this method as a DB initializer
+            before running this we have to run first migration
+            we can do that from nuget editor
+            add-migration first
+            </summary>
+        </member>
+        <member name="P:WebAPI.Models.EducationExperience.Id">
+            <summary>
+            The unique identifier for the education experience
+            </summary>
         </member>
         <member name="T:WebAPI.Models.WorkExperience">
             <summary>
@@ -514,25 +527,6 @@
             <summary>
             The unique identifier for the work experience
             </summary>
-        </member>
-        <member name="M:WebAPI.Models.WorkExperienceRepository.#ctor">
-            <summary>
-            I used fake data, haven't connected to DB yet
-            </summary>
-        </member>
-        <member name="M:WebAPI.Models.WorkExperienceRepository.find(System.Int32)">
-            <summary>
-            find work experience by ID, using Linq here. FirstOrDefault
-            if there is no work experience related to the input it will return null
-            </summary>
-            <param name="id">Id of the work experience</param>
-            <returns>Work Experience object</returns>
-        </member>
-        <member name="M:WebAPI.Models.WorkExperienceRepository.GetCompanyNames">
-            <summary>
-            Returning only company names that I worked, using Linq, casting
-            </summary>
-            <returns>List of company names</returns>
         </member>
     </members>
 </doc>

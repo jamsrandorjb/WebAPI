@@ -5,29 +5,27 @@ using System.Web;
 
 namespace WebAPI.Models
 {
-
-    public enum JobType
+    public enum EducationDegree
     {
-        FULLTIME, PARTTIME, INTERN, VOLUNTEER
+        MASTERS, BACHELORS, GENERALEDUCATION
     }
 
-
-    /// <summary>
-    /// Represents one specific work experience
-    /// </summary>
-    public class WorkExperience
+    public class EducationExperience
     {
-        public WorkExperience() { }
+        public EducationExperience() { }
 
         /// <summary>
-        /// The unique identifier for the work experience
+        /// The unique identifier for the education experience
         /// </summary>
         public int Id { get; set; }
         public int PersonId { get; set; }
-        public string CompanyName { get; set; }
-        public string PositionHeld { get; set; }
+        public string UniversityName { get; set; }
+        public EducationDegree? EduDegree { get; set; }
+        public string EduField { get; set; }
+        public double GPA { get; set; } 
+        public string AdditionalComment { get; set; }
 
-        public Address WorkAddress { get; set; }
+       public Address UniversityAddress { get; set; }
 
         //TODO create abstract class for edu and work experience, so they don't have to write these lines two times
         #region tobeabstracted
@@ -42,8 +40,10 @@ namespace WebAPI.Models
         public Boolean IsCurrent { get; set; }
         #endregion
 
-        public string Duties { get; set; }
-        public JobType? JobType { get; set; }//TODO change string to ENUM type
-
+        
     }
 }
+
+
+
+
