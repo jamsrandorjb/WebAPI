@@ -7,6 +7,7 @@ namespace WebAPI.Models
 {
     public class Country
     {
+        public Country() { }
         public string name { get; set; }
         public string alpha3code { get; set; }
         public string capital { get; set; }

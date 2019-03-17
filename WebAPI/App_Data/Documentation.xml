@@ -481,6 +481,12 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:WebAPI.Controllers.ReflectionController.CheckClass(System.String)">
+            <summary>
+            Check given string named class we have or not
+            </summary>
+            <returns>true or false</returns>
+        </member>
         <member name="T:WebAPI.Controllers.WorkExperienceController">
             <summary>
             This is where you can pull all the information about my work experience
@@ -505,13 +511,24 @@
             <param name="id">ID of the work experience</param>
             <returns>Work experience information</returns>
         </member>
-        <member name="M:WebAPI.DataAccess.ApplicationDBInitializer.#ctor">
+        <member name="M:WebAPI.Models.WorkExperienceRepository.#ctor">
             <summary>
-            Using this method as a DB initializer
-            before running this we have to run first migration
-            we can do that from nuget editor
-            add-migration first
+            
             </summary>
+        </member>
+        <member name="M:WebAPI.Models.WorkExperienceRepository.find(System.Int32)">
+            <summary>
+            find work experience by ID, using Linq here. FirstOrDefault
+            if there is no work experience related to the input it will return null
+            </summary>
+            <param name="id">Id of the work experience</param>
+            <returns>Work Experience object</returns>
+        </member>
+        <member name="M:WebAPI.Models.WorkExperienceRepository.GetCompanyNames">
+            <summary>
+            Returning only company names that I worked, using Linq, casting
+            </summary>
+            <returns>List of company names</returns>
         </member>
         <member name="P:WebAPI.Models.EducationExperience.Id">
             <summary>
@@ -526,6 +543,14 @@
         <member name="P:WebAPI.Models.WorkExperience.Id">
             <summary>
             The unique identifier for the work experience
+            </summary>
+        </member>
+        <member name="M:WebAPI.DataAccess.ApplicationDBInitializer.#ctor">
+            <summary>
+            Using this method as a DB initializer
+            before running this we have to run first migration
+            we can do that from nuget editor
+            add-migration "comment here"
             </summary>
         </member>
     </members>

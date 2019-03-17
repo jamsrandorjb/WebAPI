@@ -14,10 +14,10 @@ namespace WebAPI.Controllers
     /// </summary>
     public class WorkExperienceController : System.Web.Http.ApiController
     {
+        private WorkExperienceRepository wer = new WorkExperienceRepository();
         //private WorkExperienceRepository wer;
         public WorkExperienceController() {
-            //if (wer == null)
-            //    wer = new WorkExperienceRepository();
+           
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace WebAPI.Controllers
         [HttpGet]
         [ActionName("GetCompanyNames")]
         public List<string> GetCompanyNames() {
-            return null;// wer.GetCompanyNames();
+            return wer.GetCompanyNames();
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace WebAPI.Controllers
         //GET api/workexperience/get
         [NonAction]
         public List<WorkExperience> Get() {
-            return null;// wer.findAll();
+            return wer.findAll();
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace WebAPI.Controllers
         //GET api/workexperience/get/id
         [NonAction]
         public WorkExperience Get(int id) {
-            return null;//wer.find(id);
+            return wer.find(id);
         }
 
         //POST api/workexperience/post
