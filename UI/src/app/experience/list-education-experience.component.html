@@ -1,0 +1,29 @@
+<h3 class="text-center font-weight-light">Education</h3>
+<br>
+<table class="table table-hover" *ngFor="let exp of service.listEducationExperience">
+  <tr>
+    <td *ngIf="exp.IsCurrent;else elseBlockIsCurrent">
+      <b>{{exp.UniversityName}}</b> - {{exp.EduDegree}} /{{exp.StartYear}}.{{exp.StartMonth}}-Present/
+    </td>
+    <ng-template #elseBlockIsCurrent>
+        <td>
+            <b>{{exp.UniversityName}}</b> - {{exp.PositionHeld}} /{{exp.StartYear}}.{{exp.StartMonth}}-{{exp.EndYear}}.{{exp.EndMonth}}/
+        </td>
+    </ng-template>
+  </tr>
+  <tr>
+      <td *ngIf="exp.UniversityAddress.Country==='USA';else elseBlockCountry">
+        {{exp.UniversityAddress.City}},  {{exp.UniversityAddress.State}}, {{exp.UniversityAddress.Country}} #{{exp.UniversityAddress.Zip}}
+      </td>
+      <ng-template #elseBlockCountry>
+          <td>
+              {{exp.UniversityAddress.City}}, {{exp.UniversityAddress.Country}} #{{exp.UniversityAddress.Zip}}
+            </td>
+      </ng-template>
+    </tr>
+  <tr>
+      <td>
+          {{exp.AdditionalComment}}
+      </td>
+    </tr>
+</table>

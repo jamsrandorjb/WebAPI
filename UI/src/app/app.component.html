@@ -1,0 +1,41 @@
+<div class="jumbtron">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Resume</a>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="listworkexperience">Work Experiences</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="listeducationexperience">Education Experiences</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+  <hr>
+  <div class="row">
+    <div class="col-md-7">
+      <app-list-work-experience></app-list-work-experience>
+    </div>
+    <div class="col-md-5">
+      <app-createworkexperience></app-createworkexperience>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <app-list-education-experience></app-list-education-experience>
+    </div>
+    <div class="col-md-5">
+      <app-createeducationexperience></app-createeducationexperience>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!--The content below is only a placeholder and can be replaced.-->

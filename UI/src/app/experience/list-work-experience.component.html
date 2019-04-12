@@ -1,0 +1,29 @@
+<h3 class="text-center font-weight-light">Professional Experience</h3>
+<br>
+<table class="table table-hover" *ngFor="let exp of service.listWorkExperience">
+  <tr>
+    <td *ngIf="exp.IsCurrent;else elseBlockIsCurrent">
+      <b>{{exp.CompanyName}}</b> - {{exp.PositionHeld}} /{{exp.StartYear}}.{{exp.StartMonth}}-Present/
+    </td>
+    <ng-template #elseBlockIsCurrent>
+        <td>
+            <b>{{exp.CompanyName}}</b> - {{exp.PositionHeld}} /{{exp.StartYear}}.{{exp.StartMonth}}-{{exp.EndYear}}.{{exp.EndMonth}}/
+        </td>
+    </ng-template>
+  </tr>
+  <tr>
+      <td *ngIf="exp.WorkAddress.Country==='USA';else elseBlockCountry">
+        {{exp.WorkAddress.City}},  {{exp.WorkAddress.State}}, {{exp.WorkAddress.Country}} #{{exp.WorkAddress.Zip}}
+      </td>
+      <ng-template #elseBlockCountry>
+          <td>
+              {{exp.WorkAddress.City}}, {{exp.WorkAddress.Country}} #{{exp.WorkAddress.Zip}}
+            </td>
+      </ng-template>
+    </tr>
+  <tr>
+      <td>
+          {{exp.Duties}}
+      </td>
+    </tr>
+</table>
