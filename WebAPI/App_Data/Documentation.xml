@@ -484,6 +484,9 @@
         <member name="M:WebAPI.Controllers.ReflectionController.CheckClass(System.String)">
             <summary>
             Check given string named class we have or not
+            Using Reflection API
+            runtime typechecking, dynamically creating instance of a class
+            getting properties and invoking methods
             </summary>
             <returns>true or false</returns>
         </member>
@@ -545,7 +548,7 @@
             The unique identifier for the work experience
             </summary>
         </member>
-        <member name="M:WebAPI.DataAccess.ApplicationDBInitializer.#ctor">
+        <member name="M:WebAPI.DataAccess.ApplicationDBInitializer.Seed(WebAPI.DataAccess.ApplicationDBContext)">
             <summary>
             Using this method as a DB initializer
             before running this we have to run first migration

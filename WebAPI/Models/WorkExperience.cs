@@ -23,7 +23,6 @@ namespace WebAPI.Models
         /// The unique identifier for the work experience
         /// </summary>
         public int Id { get; set; }
-        public int PersonId { get; set; }
         public string CompanyName { get; set; }
         public string PositionHeld { get; set; }
 

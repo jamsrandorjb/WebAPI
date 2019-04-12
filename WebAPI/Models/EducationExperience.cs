@@ -18,7 +18,6 @@ namespace WebAPI.Models
         /// The unique identifier for the education experience
         /// </summary>
         public int Id { get; set; }
-        public int PersonId { get; set; }
         public string UniversityName { get; set; }
         public EducationDegree? EduDegree { get; set; }
         public string EduField { get; set; }

@@ -34,7 +34,11 @@ namespace WebAPI.Models
 
         public List<WorkExperience> findAll()
         {
-            return workExperiences.OrderBy(x => x.Id).ToList();
+            using (var db = new ApplicationDBContext())
+            {
+                var items = db.WorkExperiences.Include("WorkAddress");
+                return items.ToList<WorkExperience>();
+            }
         }
 
         public void addExperience(WorkExperience we)
