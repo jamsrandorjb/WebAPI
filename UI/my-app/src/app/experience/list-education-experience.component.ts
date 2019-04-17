@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EducationexperienceService } from '../shared/educationexperience.service';
+import { Educationexperience } from '../shared/educationexperience.model';
 
 
 @Component({
@@ -10,9 +11,14 @@ import { EducationexperienceService } from '../shared/educationexperience.servic
 export class ListEducationExperienceComponent implements OnInit {
 
   constructor(private service : EducationexperienceService) { }
+  listEducationExperienceObservable: Educationexperience[];
+  
 
   ngOnInit() {
-    this.service.getEducationExperience();
+    //this.service.getEducationExperience();
+    //using observable
+    this.service.getEducationExperienceObservable().subscribe(data => this.listEducationExperienceObservable = data);
+  
   }
 
 }

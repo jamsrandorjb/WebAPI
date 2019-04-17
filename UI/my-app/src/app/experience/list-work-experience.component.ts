@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Injectable , Input, Component, OnInit } from '@angular/core';
 import { WorkexperienceService } from '../shared/workexperience.service';
+import { CreateworkexperienceComponent } from './createworkexperience.component';
+
+@Injectable({
+  providedIn: 'root',
+})
 
 @Component({
   selector: 'app-list-work-experience',
@@ -8,10 +13,19 @@ import { WorkexperienceService } from '../shared/workexperience.service';
 })
 export class ListWorkExperienceComponent implements OnInit {
 
-  constructor(private service : WorkexperienceService) { }
+  @Input() createUpdateWorkExperience: CreateworkexperienceComponent;
+  constructor(private service : WorkexperienceService//, private createWorkExperience: CreateworkexperienceComponent
+    ) { }
 
   ngOnInit() {
     this.service.getWorkExperience();
   }
 
+  openCreateProfessionalExperience(){
+    this.createUpdateWorkExperience.opens('new');
+  }
+  
+  openUpdateProfessionalExperience(){
+    this.createUpdateWorkExperience.opens('update');
+  }
 }

@@ -13,13 +13,13 @@
     </div>
   </nav>
   <router-outlet></router-outlet>
-  <hr>
+  <br>
   <div class="row">
     <div class="col-md-7">
-      <app-list-work-experience></app-list-work-experience>
+      <app-list-work-experience [createUpdateWorkExperience]="createUpdateWorkExperience"></app-list-work-experience>
     </div>
     <div class="col-md-5">
-      <app-createworkexperience></app-createworkexperience>
+      <app-createworkexperience #createUpdateWorkExperience></app-createworkexperience>
     </div>
   </div>
   <div class="row">
