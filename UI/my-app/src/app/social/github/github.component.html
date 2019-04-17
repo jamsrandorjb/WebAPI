@@ -1,0 +1,12 @@
+<h5>{{ githubuser }} is on Github</h5>
+<div class="list-group" *ngIf="this.listGithubRepos">
+  <a href="#" class="list-group-item list-group-item-action" *ngFor="let repo of this.listGithubRepos">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{ repo.name }}</h5>
+      <small>{{ repo.created_at | date }}</small>
+    </div>
+    <p class="mb-1">{{ repo.description }}</p>
+    <small class="text-muted">{{ repo.git_url }}</small> 
+  </a>
+
+</div>

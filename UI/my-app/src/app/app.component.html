@@ -16,22 +16,27 @@
   <br>
   <div class="row">
     <div class="col-md-7">
-      <app-list-work-experience [createUpdateWorkExperience]="createUpdateWorkExperience"></app-list-work-experience>
+      <div>
+        <app-list-work-experience [createUpdateWorkExperience]="createUpdateWorkExperience"></app-list-work-experience>
+      </div>
+      <div>
+        <app-list-education-experience></app-list-education-experience>
+      </div>
     </div>
     <div class="col-md-5">
-      <app-createworkexperience #createUpdateWorkExperience></app-createworkexperience>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-7">
-      <app-list-education-experience></app-list-education-experience>
-    </div>
-    <div class="col-md-5">
-      <app-createeducationexperience></app-createeducationexperience>
+      <div>
+        <app-github></app-github>
+      </div>
+      <div>
+        <app-createworkexperience #createUpdateWorkExperience></app-createworkexperience>
+      </div>
+      <div>
+        <app-createeducationexperience></app-createeducationexperience>
 
+      </div>
     </div>
   </div>
-</div>
+  </div>
 
 
 

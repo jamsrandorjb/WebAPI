@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -15,6 +16,8 @@ import {
   NgbdModalNew,
   NgbdModalUpdate
 } from './experience/createworkexperience.component';
+import { GithubComponent } from './social/github/github.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 
 
@@ -26,14 +29,17 @@ import {
     CreateworkexperienceComponent,
     CreateeducationexperienceComponent,
     NgbdModalNew, 
-    NgbdModalUpdate
+    NgbdModalUpdate, 
+    GithubComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    OrderModule
   ],
   entryComponents: [NgbdModalNew, NgbdModalUpdate],
   providers: [WorkexperienceService],
