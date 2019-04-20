@@ -18,6 +18,17 @@ namespace WebAPI.DataAccess
         protected override void Seed(ApplicationDBContext context)
         {
             var person = new Person { FirstName = "Jamsrandorj", LastName = "Batbayar", PreferredName = "Jama", PhoneNumber = "3196140255" };
+            person.Email = "jamsrandorjb@outlook.com";
+            person.githubUsername = "jamsrandorjb";
+            person.linkedInUsername = "jamsrandorjb";
+            Address addHome = new Address();
+            addHome.City = "Raleigh";
+            addHome.State = "NC";
+            addHome.Country = "USA";
+            addHome.Zip = 275606;
+            person.HomeAddress = addHome;
+
+        
             //savechanges
             WorkExperience w1 = new WorkExperience();
             w1.CompanyName = "National Institute of Environmental Health Sciences";

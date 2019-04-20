@@ -13,6 +13,9 @@ namespace WebAPI.Models
         public string PreferredName { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
+        public string githubUsername { get; set; }
+        public string linkedInUsername { get; set; }
+
 
         public Address HomeAddress { get; set; }
 

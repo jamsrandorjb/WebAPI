@@ -18,6 +18,7 @@ import {
 } from './experience/createworkexperience.component';
 import { GithubComponent } from './social/github/github.component';
 import { OrderModule } from 'ngx-order-pipe';
+import { PersonComponent } from './person/person/person.component';
 
 
 
@@ -30,7 +31,7 @@ import { OrderModule } from 'ngx-order-pipe';
     CreateeducationexperienceComponent,
     NgbdModalNew, 
     NgbdModalUpdate, 
-    GithubComponent
+    GithubComponent, PersonComponent
   ],
   imports: [
     BrowserModule,

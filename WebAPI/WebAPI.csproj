@@ -237,6 +237,7 @@
     <Compile Include="Controllers\EducationExperiencesController.cs" />
     <Compile Include="Controllers\IWorkExperience.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PeopleController.cs" />
     <Compile Include="Controllers\ReflectionController.cs" />
     <Compile Include="Controllers\WorkExperienceController.cs" />
     <Compile Include="Controllers\WorkExperienceRepository.cs" />
