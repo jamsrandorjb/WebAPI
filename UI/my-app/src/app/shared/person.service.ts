@@ -13,12 +13,12 @@ export class PersonService {
   constructor(private http: HttpClient) { }
 
   getPersonById(Id){
-    this.http.get(this.rootUrl+'api/People?Id='+Id)
+    this.http.get(this.rootUrl+'People?Id='+Id)
     .toPromise().then(res => this.person = res as Person);
   }
   //using observable
   getPersonByIdObservable(Id) : Observable<Person>{
-    return this.http.get<Person>(this.rootUrl+'api/People?Id='+Id);
+    return this.http.get<Person>(this.rootUrl+'People?Id='+Id);
   }
 
 }

@@ -28,7 +28,12 @@ namespace WebAPI.Controllers
         [ResponseType(typeof(Person))]
         public async Task<IHttpActionResult> GetPerson(int id)
         {
-            Person person = await db.Person.FindAsync(id);
+            //using (var ctx = new ApplicationDBContext())
+            //{
+            //    var stud1 = ctx.Person.Include(s => s.HomeAddress).FirstOrDefault<Person>();
+            // }
+
+            Person person = db.Person.Include(s => s.HomeAddress).FirstOrDefault<Person>(); //await db.Person.FindAsync(id);
             if (person == null)
             {
                 return NotFound();
